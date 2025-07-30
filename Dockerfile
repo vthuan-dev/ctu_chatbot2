@@ -6,6 +6,10 @@ WORKDIR /
 COPY runpod_requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r /requirements.txt
 
+# Fix xformers: gỡ bản PyPI, cài bản phù hợp CUDA 11.8
+RUN pip uninstall -y xformers && \
+    pip install --no-cache-dir xformers==0.0.23.post1 --extra-index-url https://download.pytorch.org/whl/cu118
+
 # Copy handler
 COPY runpod_handler.py /handler.py
 
