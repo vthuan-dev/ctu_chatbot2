@@ -10,4 +10,4 @@ xformers
 accelerate>=0.26.1
 sentencepiece
 protobuf
-bitsandbytes-cuda118
+bitsandbytes
