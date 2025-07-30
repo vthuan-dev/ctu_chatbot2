@@ -9,6 +9,9 @@ RUN pip install --no-cache-dir -r /requirements.txt
 # Install bitsandbytes phù hợp CUDA 11.8
 RUN pip install --no-cache-dir bitsandbytes==0.42.0
 
+# Cài unsloth_zoo để tránh lỗi import
+RUN pip install --no-cache-dir unsloth_zoo
+
 # Fix xformers: gỡ bản PyPI, cài bản phù hợp CUDA 11.8
 RUN pip uninstall -y xformers && \
     pip install --no-cache-dir xformers==0.0.23.post1 --extra-index-url https://download.pytorch.org/whl/cu118
