@@ -1,0 +1,8 @@
+torch==2.1.0
+transformers==4.30.0
+runpod==0.1.0
+unsloth==0.1.0
+peft==0.1.0
+fastapi==0.95.0
+uvicorn==0.22.0
+logging==0.5.1.2
